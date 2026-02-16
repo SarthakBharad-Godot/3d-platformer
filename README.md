@@ -107,6 +107,7 @@ cd 3d-platformer
 ---
 
 ## 📁 Project Structure
+![File Structure](FILE_STRUCTURE.png)
 
 ```
 res://
