@@ -1,0 +1,65 @@
+[gd_scene load_steps=7 format=3 uid="uid://bkdw6pnvav2mo"]
+
+[ext_resource type="Script" uid="uid://db51yn7vi342s" path="res://scripts/coin.gd" id="1_rwqht"]
+[ext_resource type="ArrayMesh" uid="uid://dtsxml3wchld0" path="res://assets/models/game_coin.res" id="2_i64fm"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_kahox"]
+height = 0.1
+radius = 0.25
+
+[sub_resource type="Animation" id="Animation_11l1o"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CoinMesh:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_i64fm"]
+resource_name = "bounce"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CoinMesh:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, 1.5, 0), Vector3(0, 0.75, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_d14el"]
+_data = {
+&"RESET": SubResource("Animation_11l1o"),
+&"bounce": SubResource("Animation_i64fm")
+}
+
+[node name="Coin" type="Area3D"]
+collision_layer = 4
+script = ExtResource("1_rwqht")
+
+[node name="CoinCollider" type="CollisionShape3D" parent="."]
+transform = Transform3D(-5.46392e-08, -1.25, 0, 1.25, -5.46392e-08, 0, 0, 0, 1.25, 0, 0, 0)
+shape = SubResource("CylinderShape3D_kahox")
+
+[node name="CoinMesh" type="MeshInstance3D" parent="."]
+transform = Transform3D(-5.35306e-08, -2.381, 5.46393e-08, 0.427525, -1.32674e-07, -1.17462, 1.17462, -6.02194e-08, 0.427525, 0, 0, 0)
+mesh = ExtResource("2_i64fm")
+
+[node name="CoinAnimation" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_d14el")
+}
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="animation_finished" from="CoinAnimation" to="." method="_on_coin_animation_animation_finished"]

@@ -1,0 +1,58 @@
+[gd_scene load_steps=13 format=3 uid="uid://b0bd3hixunpe5"]
+
+[ext_resource type="AudioStream" uid="uid://db1exal8scs44" path="res://assets/sound effects/hurt.ogg" id="1_gbdfy"]
+[ext_resource type="Script" uid="uid://dpo1dfi20rja0" path="res://scripts/sound_manager.gd" id="1_s6peo"]
+[ext_resource type="AudioStream" uid="uid://gmniqr5aq453" path="res://assets/sound effects/jump.ogg" id="3_shlr6"]
+[ext_resource type="AudioStream" uid="uid://uqw0gb0too16" path="res://assets/sound effects/squash.ogg" id="4_5lwbd"]
+[ext_resource type="AudioStream" uid="uid://kbtmywf6ggo4" path="res://assets/sound effects/coin.ogg" id="5_ro3ww"]
+[ext_resource type="AudioStream" uid="uid://cj0wutummv6d2" path="res://assets/sound effects/click.ogg" id="6_v1pt3"]
+[ext_resource type="AudioStream" uid="uid://cum4blt0f2fu6" path="res://assets/sound effects/fall.ogg" id="7_mpi5b"]
+[ext_resource type="AudioStream" uid="uid://2hrhcsgv3fh1" path="res://assets/sound effects/win.mp3" id="8_aa63w"]
+[ext_resource type="AudioStream" uid="uid://bei3y2h7r4viw" path="res://assets/music/menu.ogg" id="8_k1d7a"]
+[ext_resource type="AudioStream" uid="uid://8bfo3cvms1kx" path="res://assets/music/game.mp3" id="10_gb18h"]
+[ext_resource type="AudioStream" uid="uid://23y88t0652rn" path="res://assets/sound effects/gameover.mp3" id="11_wwv6j"]
+[ext_resource type="AudioStream" uid="uid://dvh44ncu6pp0u" path="res://assets/sound effects/start.mp3" id="12_55or6"]
+
+[node name="SoundManager" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_s6peo")
+
+[node name="Hurt" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("1_gbdfy")
+volume_db = 2.5
+
+[node name="Jump" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_shlr6")
+
+[node name="Squash" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_5lwbd")
+
+[node name="Coin" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_ro3ww")
+
+[node name="Button" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_v1pt3")
+volume_db = 5.0
+
+[node name="Fall" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_mpi5b")
+
+[node name="Menu" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_k1d7a")
+
+[node name="Win" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_aa63w")
+
+[node name="Game" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("10_gb18h")
+
+[node name="GameOver" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("11_wwv6j")
+
+[node name="GameStart" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("12_55or6")

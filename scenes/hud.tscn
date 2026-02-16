@@ -1,0 +1,104 @@
+[gd_scene load_steps=6 format=3 uid="uid://ccp5ngw0bd7b8"]
+
+[ext_resource type="Script" uid="uid://dda6gl628df1g" path="res://scripts/hud.gd" id="1_5ysmq"]
+[ext_resource type="Texture2D" uid="uid://bqnen4kpmylv3" path="res://assets/images/game_coin.png" id="2_5ysmq"]
+[ext_resource type="Texture2D" uid="uid://b5df35hqq8m1l" path="res://assets/images/game_enemy.png" id="2_6fi6k"]
+[ext_resource type="FontFile" uid="uid://bhtxt6q8vw0vm" path="res://assets/fonts/NotoSansDisplay_ExtraCondensed-BlackItalic.ttf" id="2_oo0fn"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_toqtt"]
+bg_color = Color(0, 0, 0, 0.392157)
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
+
+[node name="HUD" type="CanvasLayer"]
+script = ExtResource("1_5ysmq")
+
+[node name="EnemyPanel" type="Panel" parent="."]
+offset_left = 275.0
+offset_top = 35.0
+offset_right = 475.0
+offset_bottom = 110.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_toqtt")
+
+[node name="TextureRect" type="TextureRect" parent="EnemyPanel"]
+layout_mode = 0
+offset_left = -15.0
+offset_top = -23.0
+offset_right = 110.0
+offset_bottom = 102.0
+texture = ExtResource("2_6fi6k")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="EnemyPanel"]
+layout_mode = 0
+offset_left = 87.5
+offset_top = 15.0
+offset_right = 102.5
+offset_bottom = 57.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_oo0fn")
+theme_override_font_sizes/font_size = 25
+text = "X"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="EnemyLabel" type="Label" parent="EnemyPanel"]
+layout_mode = 0
+offset_left = 120.0
+offset_top = -2.5
+offset_right = 177.0
+offset_bottom = 73.5
+theme_override_colors/font_color = Color(0.807843, 0.623529, 0.0470588, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_oo0fn")
+theme_override_font_sizes/font_size = 55
+text = "##"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CoinPanel" type="Panel" parent="."]
+offset_left = 35.0
+offset_top = 35.0
+offset_right = 235.0
+offset_bottom = 110.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_toqtt")
+
+[node name="TextureRect" type="TextureRect" parent="CoinPanel"]
+layout_mode = 0
+offset_left = 17.5
+offset_top = 5.0
+offset_right = 77.5
+offset_bottom = 65.0
+texture = ExtResource("2_5ysmq")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="CoinPanel"]
+layout_mode = 0
+offset_left = 87.5
+offset_top = 15.0
+offset_right = 102.5
+offset_bottom = 57.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_oo0fn")
+theme_override_font_sizes/font_size = 25
+text = "X"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CoinLabel" type="Label" parent="CoinPanel"]
+layout_mode = 0
+offset_left = 120.0
+offset_top = -2.5
+offset_right = 177.0
+offset_bottom = 73.5
+theme_override_colors/font_color = Color(0.807843, 0.623529, 0.0470588, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_oo0fn")
+theme_override_font_sizes/font_size = 55
+text = "##"
+horizontal_alignment = 1
+vertical_alignment = 1

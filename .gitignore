@@ -1,0 +1,70 @@
+#################################################
+# GODOT 4 – REQUIRED IGNORES
+#################################################
+
+# Godot editor cache (auto-generated)
+*.import
+.godot/
+*.import/
+
+# Mono / C# (not used now, but safe to ignore)
+.mono/
+data_*/
+
+# Export/build outputs
+build/
+export/
+exports/
+*.pck
+*.apk
+*.aab
+*.exe
+*.x86_64
+*.zip
+
+# Temporary logs
+*.log
+
+
+#################################################
+# SYSTEM FILES
+#################################################
+
+# Windows
+Thumbs.db
+desktop.ini
+
+# macOS
+.DS_Store
+
+# Linux
+*~
+
+
+#################################################
+# IDE / EDITOR
+#################################################
+
+# VS Code
+.vscode/*
+!.vscode/extensions.json
+
+# JetBrains
+.idea/
+
+# Other
+*.swp
+*.swo
+
+
+#################################################
+# GIT / MISC
+#################################################
+
+# Backup files
+*.bak
+*.tmp
+*.old
+
+# Godot auto-generated crash dumps
+crash.*.dmp

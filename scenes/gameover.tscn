@@ -1,0 +1,77 @@
+[gd_scene load_steps=6 format=3 uid="uid://rvty11f4kiyr"]
+
+[ext_resource type="Script" uid="uid://brnbfbtefi208" path="res://scripts/gameover.gd" id="1_2mkfd"]
+[ext_resource type="FontFile" uid="uid://hmv0crcq1u2o" path="res://assets/fonts/NotoSerifDisplay_ExtraCondensed-Black.ttf" id="2_h8i2o"]
+[ext_resource type="FontFile" uid="uid://bhtxt6q8vw0vm" path="res://assets/fonts/NotoSansDisplay_ExtraCondensed-BlackItalic.ttf" id="3_mt7yr"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vjb58"]
+bg_color = Color(0, 0, 0, 0)
+border_color = Color(0, 0, 0, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2mkfd"]
+bg_color = Color(0, 0, 0, 0)
+border_color = Color(0, 0, 0, 0)
+
+[node name="GameOver" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_2mkfd")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = -20.0
+offset_top = -19.0
+offset_right = 1944.0
+offset_bottom = 1098.0
+color = Color(0.0117647, 0.215686, 0.329412, 1)
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_right = 1918.0
+offset_bottom = 387.0
+theme_override_colors/font_color = Color(0.913725, 0.101961, 0.317647, 1)
+theme_override_colors/font_shadow_color = Color(0.592157, 0.737255, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/shadow_offset_x = 5
+theme_override_constants/shadow_offset_y = 5
+theme_override_constants/outline_size = 5
+theme_override_constants/shadow_outline_size = 5
+theme_override_fonts/font = ExtResource("2_h8i2o")
+theme_override_font_sizes/font_size = 150
+text = "!!! GAME OVER !!!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TryAgainButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 750.0
+offset_top = 387.0
+offset_right = 1250.0
+offset_bottom = 537.0
+theme_override_colors/font_hover_color = Color(0.913725, 0.101961, 0.317647, 1)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(0.592157, 0.737255, 0, 1)
+theme_override_fonts/font = ExtResource("3_mt7yr")
+theme_override_font_sizes/font_size = 75
+theme_override_styles/focus = SubResource("StyleBoxFlat_vjb58")
+text = "TRY AGAIN ?"
+flat = true
+icon_alignment = 1
+
+[node name="BackToMenuButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 750.0
+offset_top = 600.0
+offset_right = 1250.0
+offset_bottom = 750.0
+theme_override_colors/font_hover_color = Color(0.913725, 0.101961, 0.317647, 1)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(0.592157, 0.737255, 0, 1)
+theme_override_fonts/font = ExtResource("3_mt7yr")
+theme_override_font_sizes/font_size = 75
+theme_override_styles/focus = SubResource("StyleBoxFlat_2mkfd")
+text = "BACK TO MENU ?"
+flat = true
+
+[connection signal="pressed" from="TryAgainButton" to="." method="_on_try_again_button_pressed"]
+[connection signal="pressed" from="BackToMenuButton" to="." method="_on_back_to_menu_button_pressed"]
