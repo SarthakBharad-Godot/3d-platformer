@@ -1,6 +1,6 @@
 # 🏞️ 3D Platformer
 
-A 3D platformer game built with **Godot Engine**. Run, jump, and explore a vibrant world while collecting coins and defeating enemies in this classic 3D platforming experience!
+A 3D-platformer game built with **Godot Engine**. Run, jump, and explore a vibrant world while collecting coins and defeating enemies in this classic 3D platforming experience!
 
 ![Godot](https://img.shields.io/badge/Godot-v4.x-478CBF?logo=godotengine)
 ![License](https://img.shields.io/badge/License-GPL%203.0-blue)
@@ -26,6 +26,7 @@ A 3D platformer game built with **Godot Engine**. Run, jump, and explore a vibra
 * **Classic Platforming Gameplay** – Run, jump, and explore 3D levels
 * **Coin Collection and Enemy Encounters** – Collect coins and defeat enemies to win
 * **Responsive Controls** – Smooth character movement and jumping
+* **Screenshot Utility** – Capture your best moments with a single keystroke.
 * **Open Source** – GPL-3.0 licensed, free to modify and distribute
 
 ---
@@ -34,7 +35,8 @@ A 3D platformer game built with **Godot Engine**. Run, jump, and explore a vibra
 
 ### Gameplay
 
-![Average Gameplay](/GAMEPLAY_SCREENSHOT.png)
+![Average Gameplay](/GAMEPLAY_SCREENSHOT_1.png)
+![Average Gameplay](/GAMEPLAY_SCREENSHOT_2.png)
 
 ---
 
@@ -51,6 +53,10 @@ A 3D platformer game built with **Godot Engine**. Run, jump, and explore a vibra
 | **Jump**                    | `Spacebar` or `Enter`|
 | **Rotate Camera Left**      | `Num1`               |
 | **Rotate Camera Right**     | `Num2`               |
+| **Take Screenshot**         | `B`               |
+
+> [IMPORTANT]
+> **To use the Screenshot feature:** You must define your preferred save path in the global script located at `scripts/global.gd` before the images can be saved to your local drive. MAKE SURE YOU DEFINE A PATH BEFORE STARTING THE GAME OR IT WILL NOT RUN !!!
 
 ### Objective
 
