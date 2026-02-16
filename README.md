@@ -48,7 +48,7 @@ A 3D platformer game built with **Godot Engine**. Run, jump, and explore a vibra
 | **Move Backward**           | `S` or `↓` Arrow Key |
 | **Move Left**               | `A` or `←` Arrow Key |
 | **Move Right**              | `D` or `→` Arrow Key |
-| **Jump**                    | `Spacebar`           |
+| **Jump**                    | `Spacebar` or `Enter`|
 | **Rotate Camera Left**      | `Num1`               |
 | **Rotate Camera Right**     | `Num2`               |
 
