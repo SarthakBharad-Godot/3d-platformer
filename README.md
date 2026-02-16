@@ -233,8 +233,6 @@ If you have suggestions, questions, or encounter issues:
 * [Godot Engine Documentation](https://docs.godotengine.org)
 * [GDScript Language Reference](https://docs.godotengine.org/en/stable/getting_started/scripting/gdscript/index.html)
 * [Kenney Assets](https://kenney.nl)
-* [3D Games in Godot Tutorial](https://docs.godotengine.org/en/stable/getting_started/introduction/first_3d_game.html)
-
 ---
 
 **Enjoy the game! Happy coding! 🎮✨**
