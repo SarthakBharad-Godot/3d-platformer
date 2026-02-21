@@ -220,6 +220,18 @@ Found a bug? Have an idea for improvement? Contributions are welcome!
 
 ---
 
+## 👤 Author
+
+**Sarthak D. Bharad**
+
+- 📍 Location: Schmalkalden, Germany
+- 💼 LinkedIn: [Sarthak Bharad](https://linkedin.com/in/sarthak-bharad)
+- 🐙 GitHub: [@SarthakBharad](https://github.com/SarthakBharad)
+- 🐦 Twitter: [@maybesarthak](https://x.com/maybesarthak)
+- 📧 Email: sarthakbharad3105@gmail.com
+
+---
+
 ## 💬 Questions or Feedback?
 
 If you have suggestions, questions, or encounter issues:
