@@ -7,9 +7,23 @@
 .godot/
 *.import/
 
+# Godot 4+ specific ignores
+.nomedia
+
+# Godot-specific ignores
+.import/
+export.cfg
+export_credentials.cfg
+
+# Imported translations (automatically generated from CSV files)
+*.translation
+
 # Mono / C# (not used now, but safe to ignore)
 .mono/
 data_*/
+
+# Mono-specific ignores
+mono_crash.*.json
 
 # Export/build outputs
 build/
