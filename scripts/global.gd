@@ -8,8 +8,8 @@ extends Node
 # =========================================================
 # CONSTANTS
 # =========================================================
-const COINS_TO_WIN = 5
-const NO_OF_ENEMIES = 2
+const COINS_TO_WIN = 67
+const NO_OF_ENEMIES = 14
 
 # =========================================================
 # VARIABLES
@@ -29,7 +29,7 @@ func capture_screenshot():
 	await RenderingServer.frame_post_draw
 	var image = get_viewport().get_texture().get_image()
 	# Use forward slashes (/) or escaped backslashes (\\) in GDScript strings
-	var folder_path = var folder_path = "YOUR_PATH_HERE"
+	var folder_path = "YOUR_PATH_HERE"
 	var time = Time.get_datetime_dict_from_system()
 	var file_name = "3d_platformer_%02d-%02d-%02d.png" % [time.hour, time.minute, time.second]
 	var full_path = folder_path + file_name
